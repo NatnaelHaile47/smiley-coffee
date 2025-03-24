@@ -4,17 +4,17 @@ import Image from "next/image"
 export default function CoffeeBlog() {
   const blogPosts = [
     {
-      image: "/images/coffee-blog-1.jpg",
+      image: "/images/news1jpg.jpg",
       title: "Top Coffee Exporting Countries in 2025",
       delay: 0,
     },
     {
-      image: "/images/coffee-blog-2.jpg",
+      image: "/images/news2.jpg",
       title: "How to Source High-Quality Coffee Beans for Your Business",
       delay: 0.2,
     },
     {
-      image: "/images/coffee-blog-3.jpg",
+      image: "/images/news3.jpg",
       title: "Understanding Coffee Trade Regulations and Certifications",
       delay: 0.4,
     },

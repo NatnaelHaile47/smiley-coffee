@@ -4,25 +4,25 @@ import Image from "next/image"
 export default function OurLegacy() {
   const legacyItems = [
     {
-      icon: "/images/icon-legacy-1.svg",
+      icon: "/images/best-service.svg",
       title: "Global Sourcing",
       description: "We import and export the finest coffee beans from top farms worldwide, ensuring premium quality.",
       delay: 0,
     },
     {
-      icon: "/images/icon-legacy-2.svg",
+      icon: "/images/best-service.svg",
       title: "Ethical Trade",
       description: "Committed to fair trade and sustainable coffee farming, supporting both farmers and the environment.",
       delay: 0.2,
     },
     {
-      icon: "/images/icon-legacy-3.svg",
+      icon: "/images/best-service.svg",
       title: "Expert Processing",
       description: "Our skilled team ensures top-notch processing, roasting, and packaging for the best coffee experience.",
       delay: 0.4,
     },
     {
-      icon: "/images/icon-legacy-4.svg",
+      icon: "/images/best-service.svg",
       title: "Worldwide Distribution",
       description: "Efficient logistics and a strong supply chain ensure seamless delivery across international markets.",
       delay: 0.6,

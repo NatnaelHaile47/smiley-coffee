@@ -1,29 +1,30 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function OurFeatures() {
   const features = [
     {
-      icon: "/images/icon-features-item-1.svg",
+      icon: "/images/best-service.svg",
       title: "Global Sourcing",
       description: "We source premium coffee beans from sustainable farms worldwide.",
       delay: 0,
     },
     {
-      icon: "/images/icon-features-item-2.svg",
+      icon: "/images/best-service.svg",
       title: "Quality Assurance",
       description: "Every bean is rigorously tested to ensure only the best reaches you.",
       delay: 0.2,
     },
     {
-      icon: "/images/icon-features-item-3.svg",
+      icon: "/images/best-service.svg",
       title: "Sustainable Practices",
       description: "Our direct trade partnerships promote eco-friendly and fair practices.",
       delay: 0.4,
     },
     {
-      icon: "/images/icon-features-item-4.svg",
+      icon: "/images/best-service.svg",
       title: "Custom Blends",
       description: "Tailor-made blends crafted to suit your unique taste preferences.",
       delay: 0.6,
@@ -37,7 +38,8 @@ export default function OurFeatures() {
           <div className="col-lg-6">
             <div className="our-features-content">
               <div className="section-title">
-                <h3 className="wow fadeInUp">Our Features</h3>
+                <h3 className="wow fadeInUp" 
+                >Our Features</h3>
                 <h2 className="text-anime-style-2" data-cursor="-opaque">
                   Your trusted partner in <span>premium coffee trading</span>
                 </h2>
@@ -48,7 +50,26 @@ export default function OurFeatures() {
 
               <div className="our-features-list">
                 {features.map((feature, index) => (
-                  <div key={index} className="features-item wow fadeInUp" data-wow-delay={`${feature.delay}s`}>
+                  <div
+                    key={index}
+                    className="features-item wow fadeInUp"
+                    data-wow-delay={`${feature.delay}s`}
+                    style={{
+                      transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                      boxShadow : "0px 10px 20px rgba(0, 0, 0, 0.1)",
+                      borderRadius:10,
+                      padding:"10px"
+
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "scale(1.05)";
+                      e.currentTarget.style.boxShadow = "0px 10px 20px rgba(0, 0, 0, 0.2)";
+                      e.currentTarget.style.padding = "10px"
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "scale(1)";
+                    }}
+                  >
                     <div className="icon-box">
                       <Image src={feature.icon || "/placeholder.svg"} alt={feature.title} width={30} height={30} />
                     </div>

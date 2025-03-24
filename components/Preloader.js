@@ -19,7 +19,7 @@ export default function Preloader() {
       <div className="loading-container">
         <div className="loading"></div>
         <div id="loading-icon">
-          <Image src="/images/smily-coffee-logo.png" alt="Loading" width={150} height={170} />
+          <Image src="/images/smily-coffee-logo.png" alt="Loading" width={400} height={70} />
         </div>
       </div>
     </div>

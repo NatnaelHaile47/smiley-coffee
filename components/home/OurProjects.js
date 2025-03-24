@@ -31,33 +31,33 @@ export default function OurProjects() {
   const projects = [
     {
       image: "/images/man_collecting_coffe.jpg",
-      title: "Home Sweet Home Pest Protection",
-      categories: ["eco-friendly"],
+      title: "Sustainable Coffee Farming",
+      categories: ["sustainable"],
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
-      title: "Non-Toxic Insect Repellents Methods",
-      categories: ["termite"],
+      image: "/images/our-service1.jpg",
+      title: "Global Coffee Export Strategies",
+      categories: ["export"],
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
-      title: "Indoor Pest Prevention Techniques",
-      categories: ["outdoor"],
+      image: "/images/our-service2.jpg",
+      title: "Art of Coffee Roasting",
+      categories: ["roasting"],
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
-      title: "Pest Control Using Nanotechnology",
-      categories: ["commercial"],
+      image: "/images/our-service3.jpg",
+      title: "Specialty Coffee Tasting Events",
+      categories: ["events"],
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
-      title: "Chemical-Free Mosquito Management",
-      categories: ["home"],
+      image: "/images/our-service4.jpg",
+      title: "Eco-Friendly Coffee Packaging",
+      categories: ["sustainable"],
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
-      title: "Biorational Pest Control Approaches",
-      categories: ["home"],
+      image: "/images/our-approach2.avif",
+      title: "Efficient Coffee Distribution Networks",
+      categories: ["distribution"],
     },
   ]
 
@@ -70,7 +70,7 @@ export default function OurProjects() {
             <div className="section-title section-title-center">
               <h3 className="wow fadeInUp">Our Portfolio</h3>
               <h2 className="text-anime-style-2" data-cursor="-opaque">
-                Explore our proven track record of <span>pest-free solutions</span>
+                Explore our journey in <span>coffee excellence</span>
               </h2>
             </div>
             {/* Section Title End */}
@@ -79,7 +79,7 @@ export default function OurProjects() {
 
         <div className="row">
           <div className="col-lg-12 col-md-12">
-            {/* Choose Our Projects Nav start */}
+            {/* Filter Navigation Start */}
             <div className="our-project-nav wow fadeInUp" data-wow-delay="0.25s">
               <ul>
                 <li>
@@ -91,72 +91,72 @@ export default function OurProjects() {
                       setFilter("*")
                     }}
                   >
-                    all
+                    All
                   </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    className={filter === "home" ? "active-btn" : ""}
+                    className={filter === "sustainable" ? "active-btn" : ""}
                     onClick={(e) => {
                       e.preventDefault()
-                      setFilter("home")
+                      setFilter("sustainable")
                     }}
                   >
-                    Home Pest
+                    Sustainable
                   </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    className={filter === "commercial" ? "active-btn" : ""}
+                    className={filter === "export" ? "active-btn" : ""}
                     onClick={(e) => {
                       e.preventDefault()
-                      setFilter("commercial")
+                      setFilter("export")
                     }}
                   >
-                    Commercial Pest
+                    Export
                   </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    className={filter === "eco-friendly" ? "active-btn" : ""}
+                    className={filter === "roasting" ? "active-btn" : ""}
                     onClick={(e) => {
                       e.preventDefault()
-                      setFilter("eco-friendly")
+                      setFilter("roasting")
                     }}
                   >
-                    Eco-Friendly Pest
+                    Roasting
                   </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    className={filter === "termite" ? "active-btn" : ""}
+                    className={filter === "events" ? "active-btn" : ""}
                     onClick={(e) => {
                       e.preventDefault()
-                      setFilter("termite")
+                      setFilter("events")
                     }}
                   >
-                    Termite & Rodent
+                    Events
                   </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    className={filter === "outdoor" ? "active-btn" : ""}
+                    className={filter === "distribution" ? "active-btn" : ""}
                     onClick={(e) => {
                       e.preventDefault()
-                      setFilter("outdoor")
+                      setFilter("distribution")
                     }}
                   >
-                    Outdoor Pest
+                    Distribution
                   </a>
                 </li>
               </ul>
             </div>
-            {/* Choose Our Projects Nav End */}
+            {/* Filter Navigation End */}
           </div>
 
           <div className="col-lg-12">
@@ -205,4 +205,3 @@ export default function OurProjects() {
     </div>
   )
 }
-

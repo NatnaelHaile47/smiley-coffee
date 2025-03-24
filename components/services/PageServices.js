@@ -4,28 +4,28 @@ import Image from "next/image"
 export default function PageServices() {
   const services = [
     {
-      image: "/images/man_collecting_coffe.jpg",
-      icon: "/images/icon-service-item-1.svg",
+      image: "/images/our-service1.jpg",
+      icon: "/images/our-service1.svg",
       title: "Green Coffee Bean Sourcing",
       description: "We source premium-quality green coffee beans from top producers worldwide.",
       delay: 0,
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
+      image: "/images/our-service2.jpg",
       icon: "/images/icon-service-item-2.svg",
       title: "Roasted Coffee Export",
       description: "Exporting expertly roasted coffee to international markets with guaranteed freshness.",
       delay: 0.2,
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
+      image: "/images/our-service3.jpg",
       icon: "/images/icon-service-item-3.svg",
       title: "Private Label Coffee Solutions",
       description: "Customized coffee blends and packaging solutions for businesses and brands.",
       delay: 0.4,
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
+      image: "/images/our-service4.jpg",
       icon: "/images/icon-service-item-4.svg",
       title: "Bulk Coffee Trading",
       description: "Wholesale coffee supply for roasters, cafes, and distributors worldwide.",
@@ -39,21 +39,21 @@ export default function PageServices() {
       delay: 0.8,
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
+      image: "/images/our-approach2.avif",
       icon: "/images/icon-service-item-6.svg",
       title: "Sustainable Coffee Farming",
       description: "Supporting eco-friendly coffee farming and fair trade practices.",
       delay: 1.0,
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
+      image: "/images/our-approach.png",
       icon: "/images/icon-service-item-7.svg",
       title: "Custom Coffee Blending",
       description: "Crafting unique coffee blends tailored to your market’s taste preferences.",
       delay: 1.2,
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
+      image: "/images/banner.png",
       icon: "/images/icon-service-item-8.svg",
       title: "Coffee Logistics & Export Compliance",
       description: "Handling all logistics and regulatory requirements for smooth coffee export.",

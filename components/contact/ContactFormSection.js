@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react"
+import { Modal, Button } from "antd"
 import Image from "next/image"
 
 export default function ContactFormSection() {
@@ -10,8 +11,9 @@ export default function ContactFormSection() {
     phone: "",
     message: "",
   })
-  const [formSubmitted, setFormSubmitted] = useState(false)
   const [formError, setFormError] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalContent, setModalContent] = useState({ title: "", message: "" })
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -21,26 +23,39 @@ export default function ContactFormSection() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
-    // Basic validation
     if (!formData.fname || !formData.lname || !formData.email || !formData.phone) {
       setFormError("Please fill in all required fields")
       return
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(formData.email)) {
       setFormError("Please enter a valid email address")
       return
     }
 
-    // Here you would typically send the form data to your backend
-    // For now, we'll just simulate a successful submission
-    setFormSubmitted(true)
-    setFormError(null)
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setModalContent({ title: "Success", message: "Message sent successfully!" })
+      } else {
+        setModalContent({ title: "Error", message: data.error || "Failed to send message." })
+      }
+    } catch (error) {
+      setModalContent({ title: "Error", message: "Something went wrong." })
+    }
+
+    setIsModalOpen(true)
   }
 
   return (
@@ -48,32 +63,26 @@ export default function ContactFormSection() {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            {/* Contact Us Box Start */}
             <div className="contact-us-box">
-              {/* Contact Us Form Start */}
               <div className="contact-us-form">
-                {/* Section Title Start */}
                 <div className="section-title">
-                <h2 className="text-anime-style-2" data-cursor="-opaque">
+                  <h2>
                     Partner with us for premium <span>coffee trade solutions!</span>
                   </h2>
                 </div>
-                {/* Section Title End */}
 
-                <form id="contactForm" onSubmit={handleSubmit} className="contact-form wow fadeInUp">
+                <form id="contactForm" onSubmit={handleSubmit} className="contact-form">
                   <div className="row">
                     <div className="form-group col-md-6 mb-4">
                       <input
                         type="text"
                         name="fname"
                         className="form-control"
-                        id="fname"
                         placeholder="First name"
                         required
                         value={formData.fname}
                         onChange={handleChange}
                       />
-                      <div className="help-block with-errors"></div>
                     </div>
 
                     <div className="form-group col-md-6 mb-4">
@@ -81,13 +90,11 @@ export default function ContactFormSection() {
                         type="text"
                         name="lname"
                         className="form-control"
-                        id="lname"
                         placeholder="Last name"
                         required
                         value={formData.lname}
                         onChange={handleChange}
                       />
-                      <div className="help-block with-errors"></div>
                     </div>
 
                     <div className="form-group col-md-6 mb-4">
@@ -95,13 +102,11 @@ export default function ContactFormSection() {
                         type="email"
                         name="email"
                         className="form-control"
-                        id="email"
                         placeholder="E-mail"
                         required
                         value={formData.email}
                         onChange={handleChange}
                       />
-                      <div className="help-block with-errors"></div>
                     </div>
 
                     <div className="form-group col-md-6 mb-4">
@@ -109,26 +114,22 @@ export default function ContactFormSection() {
                         type="text"
                         name="phone"
                         className="form-control"
-                        id="phone"
                         placeholder="Phone no."
                         required
                         value={formData.phone}
                         onChange={handleChange}
                       />
-                      <div className="help-block with-errors"></div>
                     </div>
 
                     <div className="form-group col-md-12 mb-5">
                       <textarea
                         name="message"
                         className="form-control"
-                        id="message"
                         rows="4"
                         placeholder="Message"
                         value={formData.message}
                         onChange={handleChange}
                       ></textarea>
-                      <div className="help-block with-errors"></div>
                     </div>
 
                     <div className="col-md-12">
@@ -136,32 +137,32 @@ export default function ContactFormSection() {
                         <span>send message</span>
                       </button>
                       {formError && <div className="h4 text-danger mt-3">{formError}</div>}
-                      {formSubmitted && <div className="h4 text-success mt-3">Message Sent Successfully!</div>}
                     </div>
                   </div>
                 </form>
               </div>
-              {/* Contact Us Form End */}
 
-              {/* Contact Us Image Start */}
               <div className="contact-us-image">
-                <figure className="image-anime">
-                  <Image
-                    src="/images/man_collecting_coffe.jpg"
-                    alt="Contact Us"
-                    width={650}
-                    height={644}
-                    layout="responsive"
-                  />
-                </figure>
+                <Image
+                  src="/images/contact-us.webp"
+                  alt="Contact Us"
+                  width={650}
+                  height={644}
+                  layout="responsive"
+                />
               </div>
-              {/* Contact Us Image End */}
             </div>
-            {/* Contact Us Box End */}
           </div>
         </div>
       </div>
+
+      {/* AntD Modal */}
+      <Modal title={modalContent.title} open={isModalOpen} onCancel={() => setIsModalOpen(false)} footer={null}>
+        <p>{modalContent.message}</p>
+        <Button type="primary" onClick={() => setIsModalOpen(false)}>
+          OK
+        </Button>
+      </Modal>
     </div>
   )
 }
-

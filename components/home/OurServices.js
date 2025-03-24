@@ -41,31 +41,30 @@ export default function OurServices() {
 
   const services = [
     {
-      image: "/images/man_collecting_coffe.jpg",
-      icon: "/images/icon-service-item-1.svg",
+      image: "/images/our-service1.jpg",
       title: "Global Coffee Sourcing",
       description: "Discover premium coffee beans from sustainable farms across the globe.",
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
+      image: "/images/our-service2.jpg",
       icon: "/images/icon-service-item-2.svg",
       title: "Expert Roasting Techniques",
       description: "Each bean is roasted to perfection, preserving its unique flavor profile.",
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
+      image: "/images/our-service3.jpg",
       icon: "/images/icon-service-item-3.svg",
       title: "Custom Coffee Blends",
       description: "Tailor-made blends crafted to suit your market's unique taste.",
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
+      image: "/images/our-service1.jpg",
       icon: "/images/icon-service-item-4.svg",
       title: "Efficient Logistics",
       description: "Reliable and timely delivery from origin to your doorstep.",
     },
     {
-      image: "/images/man_collecting_coffe.jpg",
+      image: "/images/our-service4.jpg",
       icon: "/images/icon-service-item-5.svg",
       title: "Quality Assurance",
       description: "Rigorous testing and certifications ensure only the best coffee reaches you.",
@@ -116,14 +115,14 @@ export default function OurServices() {
 
                         {/* Service Body Start */}
                         <div className="service-body">
-                          <div className="icon-box">
+                          {/* <div className="icon-box">
                             <Image
                               src={service.icon || "/placeholder.svg"}
                               alt={service.title}
                               width={40}
                               height={40}
                             />
-                          </div>
+                          </div> */}
                           <div className="service-content">
                             <h3>
                               <Link href="/service-single">{service.title}</Link>

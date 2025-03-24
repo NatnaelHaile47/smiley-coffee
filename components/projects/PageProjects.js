@@ -1,13 +1,12 @@
-"use client"
-import { useEffect, useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
+"use client";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function PageProjects() {
-  const [filter, setFilter] = useState("*")
+  const [filter, setFilter] = useState("*");
 
   useEffect(() => {
-    // Initialize Isotope if available
     if (typeof window !== "undefined" && window.Isotope) {
       const iso = new window.Isotope(".project-item-boxes", {
         itemSelector: ".project-item-box",
@@ -15,66 +14,65 @@ export default function PageProjects() {
         masonry: {
           columnWidth: 1,
         },
-      })
+      });
 
-      // Filter items on filter change
       if (filter) {
-        iso.arrange({ filter: filter === "*" ? null : `.${filter}` })
+        iso.arrange({ filter: filter === "*" ? null : `.${filter}` });
       }
 
       return () => {
-        iso.destroy()
-      }
+        iso.destroy();
+      };
     }
-  }, [filter])
+  }, [filter]);
 
   const projects = [
     {
-      image: "/images/project-1.jpg",
-      title: "Home Sweet Home Pest Protection",
+      image: "/images/our-service1.jpg",
+      title: "Ethiopian Coffee Beans",
+      categories: ["organic"],
+    },
+    {
+      image: "/images/our-service2.jpg",
+      title: "Premium Robusta Exports",
+      categories: ["robusta", "wholesale"],
+    },
+    {
+      image: "/images/our-service3.jpg",
+      title: "Specialty Coffee Blends",
+      categories: ["specialty", "organic"],
+    },
+    {
+      image: "/images/our-service4.jpg",
+      title: "Sustainable Coffee Farming",
+      categories: ["eco-friendly", "organic"],
+    },
+    {
+      image: "/images/man_collecting_coffe.jpg",
+      title: "Direct Trade Coffee Partners",
+      categories: ["fair-trade"],
+    },
+    {
+      image: "/images/our-approach.png",
+      title: "Expert Coffee Roasting",
+      categories: ["roasting", "specialty"],
+    },
+    {
+      image: "/images/our-approach2.avif",
+      title: "Luxury Coffee Imports",
+      categories: ["wholesale"],
+    },
+    {
+      image: "/images/about_us.webp",
+      title: "Green Coffee Supply Chain",
       categories: ["eco-friendly"],
     },
     {
-      image: "/images/project-2.jpg",
-      title: "Non-Toxic Insect Repellents Methods",
-      categories: ["termite", "outdoor"],
+      image: "/images/our-service3.jpg",
+      title: "Cold Brew Innovations",
+      categories: ["specialty"],
     },
-    {
-      image: "/images/project-3.jpg",
-      title: "Innovative Pest Control Equipment",
-      categories: ["outdoor", "eco-friendly"],
-    },
-    {
-      image: "/images/project-4.jpg",
-      title: "Indoor Pest Prevention Techniques",
-      categories: ["commercial", "termite"],
-    },
-    {
-      image: "/images/project-5.jpg",
-      title: "Pest Control Using Nanotechnology",
-      categories: ["home", "eco-friendly"],
-    },
-    {
-      image: "/images/project-6.jpg",
-      title: "Chemical-Free Mosquito Management",
-      categories: ["home", "outdoor"],
-    },
-    {
-      image: "/images/project-7.jpg",
-      title: "Biorational Pest Control Approaches",
-      categories: ["home", "commercial"],
-    },
-    {
-      image: "/images/project-8.jpg",
-      title: "Urban Pest Surveillance Systems Method",
-      categories: ["termite"],
-    },
-    {
-      image: "/images/project-9.jpg",
-      title: "Sustainable Mosquito Control Methods",
-      categories: ["commercial"],
-    },
-  ]
+  ];
 
   return (
     <div className="page-projects">
@@ -89,8 +87,8 @@ export default function PageProjects() {
                     href="#"
                     className={filter === "*" ? "active-btn" : ""}
                     onClick={(e) => {
-                      e.preventDefault()
-                      setFilter("*")
+                      e.preventDefault();
+                      setFilter("*");
                     }}
                   >
                     all
@@ -99,25 +97,49 @@ export default function PageProjects() {
                 <li>
                   <a
                     href="#"
-                    className={filter === "home" ? "active-btn" : ""}
+                    className={filter === "organic" ? "active-btn" : ""}
                     onClick={(e) => {
-                      e.preventDefault()
-                      setFilter("home")
+                      e.preventDefault();
+                      setFilter("organic");
                     }}
                   >
-                    Home Pest
+                    Organic Coffee
                   </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    className={filter === "commercial" ? "active-btn" : ""}
+                    className={filter === "specialty" ? "active-btn" : ""}
                     onClick={(e) => {
-                      e.preventDefault()
-                      setFilter("commercial")
+                      e.preventDefault();
+                      setFilter("specialty");
                     }}
                   >
-                    Commercial Pest
+                    Specialty Coffee
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className={filter === "fair-trade" ? "active-btn" : ""}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setFilter("fair-trade");
+                    }}
+                  >
+                    Fair Trade
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className={filter === "wholesale" ? "active-btn" : ""}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setFilter("wholesale");
+                    }}
+                  >
+                    Wholesale Supply
                   </a>
                 </li>
                 <li>
@@ -125,35 +147,11 @@ export default function PageProjects() {
                     href="#"
                     className={filter === "eco-friendly" ? "active-btn" : ""}
                     onClick={(e) => {
-                      e.preventDefault()
-                      setFilter("eco-friendly")
+                      e.preventDefault();
+                      setFilter("eco-friendly");
                     }}
                   >
-                    Eco-Friendly Pest
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className={filter === "termite" ? "active-btn" : ""}
-                    onClick={(e) => {
-                      e.preventDefault()
-                      setFilter("termite")
-                    }}
-                  >
-                    Termite & Rodent
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className={filter === "outdoor" ? "active-btn" : ""}
-                    onClick={(e) => {
-                      e.preventDefault()
-                      setFilter("outdoor")
-                    }}
-                  >
-                    Outdoor Pest
+                    Eco-Friendly Coffee
                   </a>
                 </li>
               </ul>
@@ -195,6 +193,5 @@ export default function PageProjects() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

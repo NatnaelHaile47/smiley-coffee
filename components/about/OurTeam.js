@@ -4,25 +4,25 @@ import Image from "next/image"
 export default function OurTeam() {
   const teamMembers = [
     {
-      image: "/images/team-1.jpg",
+      image: "/images/user.jpg",
       name: "Arjun Khanna",
       position: "Technical Engineer",
       delay: 0,
     },
     {
-      image: "/images/team-2.jpg",
+      image: "/images/user.jpg",
       name: "Cameron Williamson",
       position: "Security Specialist",
       delay: 0.2,
     },
     {
-      image: "/images/team-3.jpg",
+      image: "/images/user.jpg",
       name: "Leslie Alexander",
       position: "Security Specialist",
       delay: 0.4,
     },
     {
-      image: "/images/team-4.jpg",
+      image: "/images/user.jpg",
       name: "Michael Johnson",
       position: "Support Manager",
       delay: 0.6,

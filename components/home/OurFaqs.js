@@ -43,30 +43,19 @@ export default function OurFaqs() {
   ]
 
   return (
-    <div className="our-faqs dark-section">
+    <div className="our-faqs">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6">
             {/* Our FAQs Images Start */}
             <div className="our-faqs-images">
               {/* FAQ Image 1 */}
-              <div className="faqs-img-1">
-                <figure className="image-anime reveal">
-                  <Image src="/images/faq2.webp" alt="FAQs" width={500} height={757} layout="responsive" />
-                </figure>
-              </div>
+              <div className="faqs-img-1 animate-fade-in">
+  <figure className="image-anime reveal">
+    <Image src="/images/faq2.webp" alt="FAQs" width={500} height={757} layout="responsive" />
+  </figure>
+</div>
               {/* FAQ Image 2 */}
-              <div className="faqs-img-2">
-                <figure className="image-anime reveal">
-                  <Image src="/images/faq2.webp" alt="FAQs" width={353} height={360} layout="responsive" />
-                </figure>
-              </div>
-              {/* FAQ Image 3 */}
-              <div className="faqs-img-3">
-                <figure className="image-anime reveal">
-                  <Image src="/images/faq2.webp" alt="FAQs" width={222} height={188} layout="responsive" />
-                </figure>
-              </div>
             </div>
             {/* Our FAQs Images End */}
           </div>

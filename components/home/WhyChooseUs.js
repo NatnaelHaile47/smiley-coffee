@@ -4,19 +4,19 @@ import Image from "next/image"
 export default function WhyChooseUs() {
   const whyChooseItems = [
     {
-      icon: "/images/icon-why-choose-1.svg",
+      icon: "/images/best-service.svg",
       title: "Global Coffee Sourcing",
       description: "We partner with sustainable farms worldwide to bring you the finest coffee beans.",
       delay: 0,
     },
     {
-      icon: "/images/icon-why-choose-1.svg",
+      icon: "/images/best-service.svg",
       title: "Customized Coffee Blends",
       description: "Tailor-made blends crafted to suit your unique taste preferences.",
       delay: 0.2,
     },
     {
-      icon: "/images/icon-why-choose-1.svg",
+      icon: "/images/best-service.svg",
       title: "Certified Coffee Specialists",
       description: "Our experts ensure quality from bean to brew with strict certifications.",
       delay: 0.4,

@@ -48,6 +48,7 @@
 	--primary-color: #002F47;
 	--secondary-color: #F5F7F2;
 	--text-color: #3D5A6A;
+	/* --accent-color: #6F4E37; */
 	--accent-color: #299B46;
 	--white-color: #FFFFFF;
 	--divider-color: #002F471A;
@@ -2004,7 +2005,7 @@ header.main-header .header-sticky.active {
 	font-size: 20px;
 	font-weight: 700;
 	line-height: 1.4em;
-	color: var(--white-color);
+	color: var(--text-color);
 	padding-right: 30px;
 	transition: all 0.3s ease-in-out;
 }
@@ -2037,7 +2038,7 @@ header.main-header .header-sticky.active {
 }
 
 .accordion-item .accordion-body p {
-	color: var(--white-color);
+	color: var(--text-color);
 	margin-bottom: 15px;
 }
 
@@ -5895,5 +5896,21 @@ header.main-header .header-sticky.active {
 
 	.error-page-image img {
 		max-width: 80%;
+	}
+
+	@keyframes fadeInLeft {
+		from {
+			opacity: 0;
+			transform: translateX(-50px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	.animate-fade-in {
+		animation: fadeInLeft 0.8s ease-out;
 	}
 }
