@@ -6,11 +6,9 @@ import AboutUs from "@/components/home/AboutUs"
 import OurServices from "@/components/home/OurServices"
 import OurFeatures from "@/components/home/OurFeatures"
 import OurProjects from "@/components/home/OurProjects"
-import OurPricing from "@/components/home/OurPricing"
 import WhyChooseUs from "@/components/home/WhyChooseUs"
 import OurFaqs from "@/components/home/OurFaqs"
 import OurTestimonials from "@/components/home/OurTestimonials"
-import CtaBox from "@/components/home/CtaBox"
 import OurBlog from "@/components/home/OurBlog"
 
 export default function Home() {
