@@ -8,140 +8,142 @@ export default function CoffeeProducts() {
   const roastedCoffees = [
     {
       id: 1,
-      name: "Ethiopian Yirgacheffe",
-      description: "A bright, floral coffee with notes of jasmine and citrus. Perfect for those who enjoy a light, aromatic brew.",
+      name: "Jimma Roasted Coffee",
+      description: "Full-bodied with earthy tones and a hint of spice. A bold coffee with low acidity.",
       image: "/images/banner.png",
-      price: "$24.99",
-      origin: "Ethiopia",
-      roastLevel: "Light",
-      weight: "250g",
-      process: "Washed"
+      price: "$45.99",
+      origin: "Jimma, Ethiopia",
+      roastLevel: "Medium-Dark",
+      weight: "1kg",
+      process: "Natural"
     },
     {
       id: 2,
-      name: "Colombian Supremo",
-      description: "Rich and balanced with notes of caramel and nuts. A classic coffee that never disappoints.",
+      name: "Jimma Roasted Coffee",
+      description: "Full-bodied with earthy tones and a hint of spice. A bold coffee with low acidity.",
       image: "/images/banner.png",
-      price: "$22.99",
-      origin: "Colombia",
-      roastLevel: "Medium",
-      weight: "250g",
-      process: "Washed"
+      price: "$49.99",
+      origin: "Jimma, Ethiopia",
+      roastLevel: "Medium-Dark",
+      weight: "2kg",
+      process: "Natural"
     },
     {
       id: 3,
-      name: "Kenya AA",
-      description: "Complex and winey with blackberry and grape notes. A premium coffee for the discerning palate.",
+      name: "Jimma Roasted Coffee",
+      description: "Full-bodied with earthy tones and a hint of spice. A bold coffee with low acidity.",
       image: "/images/banner.png",
-      price: "$29.99",
-      origin: "Kenya",
+      price: "$54.99",
+      origin: "Jimma, Ethiopia",
       roastLevel: "Medium-Dark",
-      weight: "250g",
-      process: "Washed"
+      weight: "3kg",
+      process: "Natural"
     },
     {
       id: 4,
-      name: "Guatemala Antigua",
-      description: "Smooth and chocolatey with hints of apple and spice. A crowd-pleasing coffee with depth.",
+      name: "Yirgacheffe Roasted Coffee",
+      description: "A bright, floral coffee with notes of jasmine and citrus. Perfect for those who enjoy a light, aromatic brew.",
       image: "/images/banner.png",
-      price: "$26.99",
-      origin: "Guatemala",
-      roastLevel: "Medium",
-      weight: "250g",
+      price: "$39.99",
+      origin: "Yirgacheffe, Ethiopia",
+      roastLevel: "Light",
+      weight: "1kg",
       process: "Washed"
     },
     {
       id: 5,
-      name: "Sumatra Mandheling",
-      description: "Full-bodied with earthy notes and low acidity. Perfect for those who prefer a bold, rich coffee.",
+      name: "Yirgacheffe Roasted Coffee",
+      description: "A bright, floral coffee with notes of jasmine and citrus. Perfect for those who enjoy a light, aromatic brew.",
       image: "/images/banner.png",
-      price: "$23.99",
-      origin: "Indonesia",
-      roastLevel: "Dark",
-      weight: "250g",
-      process: "Wet-Hulled"
+      price: "$44.99",
+      origin: "Yirgacheffe, Ethiopia",
+      roastLevel: "Light",
+      weight: "2kg",
+      process: "Washed"
     },
     {
       id: 6,
-      name: "Costa Rica Tarrazu",
-      description: "Clean and bright with notes of honey and orange. A well-balanced coffee with great complexity.",
+      name: "Bonga Roasted Coffee",
+      description: "A rare and exotic coffee with floral and fruity notes. Bright acidity with a honey-like sweetness.",
       image: "/images/banner.png",
-      price: "$25.99",
-      origin: "Costa Rica",
-      roastLevel: "Medium",
-      weight: "250g",
+      price: "$49.99",
+      origin: "Bonga, Ethiopia",
+      roastLevel: "Light-Medium",
+      weight: "5kg",
       process: "Honey"
     }
-  ]
-
+  ];
+  
   const nonRoastedCoffees = [
     {
-      id: 1,
-      name: "Ethiopian Yirgacheffe Green",
+      id: 7,
+      name: "Jimma Green Coffee Beans",
+      description: "Bold and full-bodied green beans with a nutty and chocolatey character.",
+      image: "/images/banner.png",
+      price: "$35.99",
+      origin: "Jimma, Ethiopia",
+      moisture: "10.8%",
+      weight: "1kg",
+      grade: "Grade 2"
+    },
+    {
+      id: 8,
+      name: "Jimma Green Coffee Beans",
+      description: "Bold and full-bodied green beans with a nutty and chocolatey character.",
+      image: "/images/banner.png",
+      price: "$39.99",
+      origin: "Jimma, Ethiopia",
+      moisture: "10.8%",
+      weight: "2kg",
+      grade: "Grade 2"
+    },
+    {
+      id: 9,
+      name: "Jimma Green Coffee Beans",
+      description: "Bold and full-bodied green beans with a nutty and chocolatey character.",
+      image: "/images/banner.png",
+      price: "$44.99",
+      origin: "Jimma, Ethiopia",
+      moisture: "10.8%",
+      weight: "3kg",
+      grade: "Grade 2"
+    },
+    {
+      id: 10,
+      name: "Yirgacheffe Green Coffee Beans",
       description: "Premium green coffee beans from the birthplace of coffee. Perfect for home roasting.",
       image: "/images/banner.png",
-      price: "$19.99",
-      origin: "Ethiopia",
+      price: "$29.99",
+      origin: "Yirgacheffe, Ethiopia",
       moisture: "10.5%",
       weight: "1kg",
       grade: "Grade 1"
     },
     {
-      id: 2,
-      name: "Colombian Excelso Green",
-      description: "High-quality green beans with excellent potential for roasting. Well-balanced and versatile.",
+      id: 11,
+      name: "Yirgacheffe Green Coffee Beans",
+      description: "Premium green coffee beans from the birthplace of coffee. Perfect for home roasting.",
       image: "/images/banner.png",
-      price: "$18.99",
-      origin: "Colombia",
-      moisture: "11%",
-      weight: "1kg",
-      grade: "Excelso"
-    },
-    {
-      id: 3,
-      name: "Kenya AA Green",
-      description: "Premium green beans with exceptional quality. Known for their complex flavor potential.",
-      image: "/images/banner.png",
-      price: "$24.99",
-      origin: "Kenya",
-      moisture: "10.8%",
-      weight: "1kg",
-      grade: "AA"
-    },
-    {
-      id: 4,
-      name: "Guatemala SHB Green",
-      description: "Strictly Hard Bean green coffee with excellent density and flavor potential.",
-      image: "/images/banner.png",
-      price: "$21.99",
-      origin: "Guatemala",
-      moisture: "11.2%",
-      weight: "1kg",
-      grade: "SHB"
-    },
-    {
-      id: 5,
-      name: "Sumatra Mandheling Green",
-      description: "Green beans with unique characteristics. Perfect for those who enjoy earthy, full-bodied coffee.",
-      image: "/images/banner.png",
-      price: "$20.99",
-      origin: "Indonesia",
-      moisture: "11.5%",
-      weight: "1kg",
+      price: "$34.99",
+      origin: "Yirgacheffe, Ethiopia",
+      moisture: "10.5%",
+      weight: "2kg",
       grade: "Grade 1"
     },
     {
-      id: 6,
-      name: "Costa Rica SHB Green",
-      description: "High-altitude green beans with excellent potential for complex flavors.",
+      id: 12,
+      name: "Bonga Green Coffee Beans",
+      description: "Exotic green beans from the Bonga forest, offering bright acidity and a honey-sweet aftertaste.",
       image: "/images/banner.png",
-      price: "$22.99",
-      origin: "Costa Rica",
+      price: "$41.99",
+      origin: "Bonga, Ethiopia",
       moisture: "10.7%",
-      weight: "1kg",
-      grade: "SHB"
+      weight: "2.5kg",
+      grade: "Specialty"
     }
-  ]
+  ];
+  
+  
 
   const cardStyle = {
     background: '#fff',
@@ -257,7 +259,7 @@ export default function CoffeeProducts() {
                     color: '#333',
                     fontWeight: '600'
                   }}>
-                    {coffee.name}
+                    {`${coffee.name} (${coffee.weight})`}
                   </h3>
                   <p style={{ 
                     color: '#666',
