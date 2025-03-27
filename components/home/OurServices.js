@@ -99,7 +99,6 @@ export default function OurServices() {
                       <div className="service-item">
                         {/* Service Image Start */}
                         <div className="service-image">
-                          <Link href="/service-single" data-cursor-text="View">
                             <figure className="image-anime">
                               <Image
                                 src={service.image || "/placeholder.svg"}
@@ -109,7 +108,6 @@ export default function OurServices() {
                                 layout="responsive"
                               />
                             </figure>
-                          </Link>
                         </div>
                         {/* Service Image End */}
 
@@ -125,14 +123,14 @@ export default function OurServices() {
                           </div> */}
                           <div className="service-content">
                             <h3>
-                              <Link href="/service-single">{service.title}</Link>
+                              {service.title}
                             </h3>
                             <p>{service.description}</p>
                           </div>
                           <div className="service-btn">
-                            <Link href="/service-single" className="readmore-btn">
+                            {/* <Link href="/service-single" className="readmore-btn">
                               read More
-                            </Link>
+                            </Link> */}
                           </div>
                         </div>
                         {/* Service Body End */}

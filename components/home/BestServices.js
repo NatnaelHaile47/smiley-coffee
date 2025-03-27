@@ -54,9 +54,9 @@ export default function BestServices() {
                   </div>
                   <div className="best-service-item-content">
                     <h3>{service.title}</h3>
-                    <Link href="/contact" className="readmore-btn">
+                    {/* <Link href="/contact" className="readmore-btn">
                       read more
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               ))}

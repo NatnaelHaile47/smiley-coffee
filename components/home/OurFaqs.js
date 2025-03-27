@@ -43,7 +43,7 @@ export default function OurFaqs() {
   ]
 
   return (
-    <div className="our-faqs">
+    <div className="our-faqs light-bg-section">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6">

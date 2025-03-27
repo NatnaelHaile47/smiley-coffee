@@ -61,16 +61,21 @@ export default function Header() {
                       About Us
                     </Link>
                   </li>
+                  <li className={`nav-item ${pathname === "/product" ? "active" : ""}`}>
+                    <Link className="nav-link" href="/product">
+                      Products
+                    </Link>
+                  </li>
                   <li className={`nav-item ${pathname === "/services" ? "active" : ""}`}>
                     <Link className="nav-link" href="/services">
                       Services
                     </Link>
                   </li>
-                  <li className={`nav-item ${pathname === "/blog" ? "active" : ""}`}>
+                  {/* <li className={`nav-item ${pathname === "/blog" ? "active" : ""}`}>
                     <Link className="nav-link" href="/blog">
                       Blog
                     </Link>
-                  </li>
+                  </li> */}
                   {/* <li className="nav-item submenu">
                     <Link className="nav-link" href="#">
                       Pages

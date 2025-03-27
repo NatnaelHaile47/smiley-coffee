@@ -36,7 +36,7 @@ export default function AboutUs() {
   ];
 
   return (
-    <div className="about-us">
+    <div className="about-us light-bg-section">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-5">

@@ -102,7 +102,7 @@ export default function OurTestimonials({ aboutPage }) {
   }
 
   return (
-    <div className={`our-testimonials ${aboutPage ? "about-testimonials" : ""}`}>
+    <div className={`our-testimonials light-bg-section ${aboutPage ? "about-testimonials" : ""}`}>
       <div className="container">
         <div className="row section-row">
           <div className="col-lg-12">

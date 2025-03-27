@@ -32,9 +32,9 @@ export default function Footer() {
                 <li>
                   <Link href="/services">Our Services</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/products">Our Products</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/blog">Our Blog</Link>
                 </li>
@@ -48,7 +48,7 @@ export default function Footer() {
 
           <div className="col-lg-2 col-md-4">
             {/* Footer Links Start */}
-            <div className="footer-links">
+            {/* <div className="footer-links">
               <h3>Links</h3>
               <ul>
                 <li>
@@ -67,7 +67,7 @@ export default function Footer() {
                   <Link href="/projects-single">Global Logistics</Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
             {/* Footer Links End */}
           </div>
 

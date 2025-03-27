@@ -32,7 +32,7 @@ export default function OurFeatures() {
   ];
 
   return (
-    <div className="our-features">
+    <div className="our-features light-bg-section">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6">

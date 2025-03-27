@@ -10,7 +10,7 @@ import WhyChooseUs from "@/components/home/WhyChooseUs"
 import OurFaqs from "@/components/home/OurFaqs"
 import OurTestimonials from "@/components/home/OurTestimonials"
 import OurBlog from "@/components/home/OurBlog"
-
+import CoffeeProducts from "@/components/home/CoffeeProducts"
 export default function Home() {
   useEffect(() => {
     // Initialize any scripts that need to run after component mount
@@ -22,16 +22,19 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <BestServices />
+      {/* <BestServices /> */}
+      <div id="coffee-products" className="mt-5">
+        <CoffeeProducts />
+      </div>
       <AboutUs />
       <OurServices />
       <OurFeatures />
-      <OurProjects />
+      {/* <OurProjects /> */}
       {/* <OurPricing /> */}
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <OurTestimonials />
       <OurFaqs />
-      <OurBlog />
+      {/* <OurBlog /> */}
     </main>
   )
 }

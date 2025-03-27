@@ -28,8 +28,8 @@ export default function HeroSection() {
                 <Link href="/contact" className="btn-default btn-highlighted">
                   Request a Quote
                 </Link>
-                <Link href="/services" className="hero-service-btn">
-                  View All Services
+                <Link href="#coffee-products" className="hero-service-btn">
+                  View Our Coffee Collections
                 </Link>
               </div>
               {/* Hero Button End */}
